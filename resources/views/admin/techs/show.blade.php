@@ -37,12 +37,12 @@
         <div class="container py-5 d-flex align-items-center justify-content-between">
             <div class="d-flex">
                 <div class="">
-                    {{-- <a class="btn btn-dark" href="{{ route('admin.techs.edit', $technology) }}">
+                    <a class="btn btn-dark" href="{{ route('admin.technologies.edit', $technology) }}">
                         <i class="fas fa-pencil fa-lg fa-fw"></i>
                         <span class="px-2 fw-bold">
                             EDIT
                         </span>
-                    </a> --}}
+                    </a>
                 </div>
                 <div class="px-3">
                     <!-- Button trigger modal -->
@@ -69,13 +69,13 @@
                                     <div class="container-fluid">❌care❌care❌</div>
                                 </div>
                                 <div class="modal-footer">
-                                    {{-- <form action="{{ route('admin.technologies.destroy', $type) }}" method="post">
+                                    <form action="{{ route('admin.technologies.destroy', $technology) }}" method="post">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">
                                             Delete this tech
                                         </button>
-                                    </form> --}}
+                                    </form>
                                 </div>
                             </div>
                         </div>
