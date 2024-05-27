@@ -13,7 +13,7 @@ class TechnologyController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.techs.index');
     }
 
     /**
@@ -37,7 +37,7 @@ class TechnologyController extends Controller
      */
     public function show(Technology $technology)
     {
-        //
+        return view('admin.techs.show');
     }
 
     /**
