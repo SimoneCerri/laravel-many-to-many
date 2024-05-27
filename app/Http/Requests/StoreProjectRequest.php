@@ -28,6 +28,7 @@ class StoreProjectRequest extends FormRequest
             'content'=> 'nullable',
             'url1'=> 'nullable|max:255',
             'url2' => 'nullable|max:255',
+            'technologies' => 'exists:technologies,id',
         ];
     }
 }
