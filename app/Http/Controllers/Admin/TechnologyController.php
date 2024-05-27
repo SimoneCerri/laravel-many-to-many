@@ -38,7 +38,7 @@ class TechnologyController extends Controller
      */
     public function show(Technology $technology)
     {
-        dd($technology);
+        //dd($technology);
         //$tech = $technology;
         //dd($tech);
         return view('admin.techs.show',compact('technology'));
@@ -49,7 +49,7 @@ class TechnologyController extends Controller
      */
     public function edit(Technology $technology)
     {
-        return view('admin.techs.edit');
+        return view('admin.techs.edit',compact('technology'));
     }
 
     /**

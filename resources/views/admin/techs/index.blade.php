@@ -36,36 +36,36 @@
                         </tr>
                     </thead>
                     <tbody class="">
-                        @forelse ($technologies as $tech)
+                        @forelse ($technologies as $technology)
                             <tr class="">
-                                <td scope="row">{{ $tech->id }}</td>
-                                <td scope="row">{{ $tech->name }}</td>
-                                <td scope="row">{{ $tech->slug }}</td>
+                                <td scope="row">{{ $technology->id }}</td>
+                                <td scope="row">{{ $technology->name }}</td>
+                                <td scope="row">{{ $technology->slug }}</td>
                                 <td scope="row" class="text-center d-flex justify-content-evenly">
                                     <div class="px-1">
-                                        <a class="btn btn-dark" href="{{ route('admin.technologies.show', $tech) }}">
+                                        <a class="btn btn-dark" href="{{ route('admin.technologies.show', $technology) }}">
                                             <i class="fas fa-eye fa-sm fa-fw"></i>
                                         </a>
                                     </div>
                                     <div class="px-1">
-                                        <a class="btn btn-dark" href="{{ route('admin.technologies.edit', $tech) }}">
+                                        <a class="btn btn-dark" href="{{ route('admin.technologies.edit', $technology) }}">
                                             <i class="fas fa-pencil fa-sm fa-fw"></i>
                                         </a>
                                     </div>
                                     <div class="px-1">
                                         <!-- Button trigger modal -->
                                         <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                            data-bs-target="#modalId-{{ $tech->id }}">
+                                            data-bs-target="#modalId-{{ $technology->id }}">
                                             <i class="fas fa-trash-can fa-sm fa-fw"></i>
                                         </button>
                                         <!-- Modal -->
-                                        <div class="modal fade" id="modalId-{{ $tech->id }}" tabindex="-1"
+                                        <div class="modal fade" id="modalId-{{ $technology->id }}" tabindex="-1"
                                             role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="modalTitleId">
-                                                            Are you sure to delete {{ $tech->name }} tech ?
+                                                            Are you sure to delete {{ $technology->name }} tech ?
                                                         </h5>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
@@ -74,7 +74,8 @@
                                                         <div class="container-fluid">❌care❌care❌</div>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <form action="{{ route('admin.technologies.destroy', $tech) }}"
+                                                        <form
+                                                            action="{{ route('admin.technologies.destroy', $technology) }}"
                                                             method="post">
                                                             @csrf
                                                             @method('DELETE')

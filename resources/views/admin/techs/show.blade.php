@@ -6,7 +6,7 @@
             <div class="container d-flex align-items-center justify-content-between">
                 <h1>
                     <strong>
-                        {{ $tech->name }}
+                        {{ $technology->name }}
                     </strong>
                 </h1>
             </div>
@@ -24,20 +24,20 @@
         <div class="container py-5">
             <div class="row">
                 <div class="col-4">
-                    <span scope="row">{{ $tech->id }}</span>
+                    <span scope="row">{{ $technology->id }}</span>
                 </div>
                 <div class="col-4">
-                    <span scope="row">{{ $tech->name }}</span>
+                    <span scope="row">{{ $technology->name }}</span>
                 </div>
                 <div class="col-4">
-                    <span scope="row">{{ $tech->slug }}</span>
+                    <span scope="row">{{ $technology->slug }}</span>
                 </div>
             </div>
         </div>
         <div class="container py-5 d-flex align-items-center justify-content-between">
             <div class="d-flex">
                 <div class="">
-                    {{-- <a class="btn btn-dark" href="{{ route('admin.techs.edit', $tech) }}">
+                    {{-- <a class="btn btn-dark" href="{{ route('admin.techs.edit', $technology) }}">
                         <i class="fas fa-pencil fa-lg fa-fw"></i>
                         <span class="px-2 fw-bold">
                             EDIT
@@ -47,20 +47,20 @@
                 <div class="px-3">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                        data-bs-target="#modalId-{{ $tech->id }}">
+                        data-bs-target="#modalId-{{ $technology->id }}">
                         <span class="px-2 fw-bold">
                             DELETE
                         </span>
                         <i class="fas fa-trash-can fa-lg fa-fw"></i>
                     </button>
                     <!-- Modal -->
-                    <div class="modal fade" id="modalId-{{ $tech->id }}" tabindex="-1" role="dialog"
+                    <div class="modal fade" id="modalId-{{ $technology->id }}" tabindex="-1" role="dialog"
                         aria-labelledby="modalNameId" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-name" id="modalNameId">
-                                        Are you sure to delete {{ $tech->name }} tech ?
+                                        Are you sure to delete {{ $technology->name }} tech ?
                                     </h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
