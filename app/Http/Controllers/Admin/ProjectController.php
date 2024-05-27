@@ -36,11 +36,13 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
+        //dd($request);
         //validate
         $validatedRequest = $request->validated();
         $slug = Str::slug($request->title,'-');
         //dd($slug);
         //create
+        //dd($validatedRequest);
         $validatedRequest['slug'] = $slug;
         $title = $validatedRequest['title'];
         if($request->has('img')) //check if request have the 'img' inside

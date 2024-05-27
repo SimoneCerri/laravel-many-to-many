@@ -12,7 +12,7 @@
             </div>
         </div>
     </header>
-
+    @dd($project)
     <section class="py-5">
         <div class="container py-5">
             <div class="row">
@@ -49,7 +49,13 @@
             <div class="row text-center py-3">
                 <div class="col-12">
                     <span class="fw-bold">Type:</span> <br>
-                    <span scope="col-12">{{ $project->type ? $project->type->name : "Not selected" }}</span>
+                    <span scope="col-12">{{ $project->type ? $project->type->name : 'Not selected' }}</span>
+                </div>
+            </div>
+            <div class="row text-center py-3">
+                <div class="col-12">
+                    <span class="fw-bold">Techs:</span> <br>
+                    <span scope="col-12">{{ $project->technologies ? $project->technologies : 'Not selected' }}</span>
                 </div>
             </div>
             <div class="row text-center py-3">

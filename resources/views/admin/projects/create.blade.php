@@ -25,22 +25,28 @@
             </div>
             <div class="mb-3 py-3">
                 <label for="type_id" class="form-label">Type</label>
-                <select class="form-select" name="type_id" id="type_id">
+                <select class="form-select @error('type_id') is-invalid @enderror" name="type_id" id="type_id">
                     <option selected disabled>Select one</option>
                     @foreach ($types as $type)
                         <option value="{{ $type->id }}" {{ $type->id == old('type_id') ? 'selected' : '' }}>
                             {{ $type->name }}</option>
                     @endforeach
                 </select>
+                @error('type_id')
+                    <div class="text-danger py-2">{{ $message }}</div>
+                @enderror
             </div>
             <div class="d-flex flex-wrap py-3">
                 @foreach ($technologies as $technology)
                     <div class="form-check col-2">
-                        <input class="form-check-input" type="checkbox" value="{{ $technology->id }}"
-                            id="tech-{{ $technology->id }}" name="tachnologies[]"
+                        <input class="form-check-input @error('technologies') is-invalid @enderror" type="checkbox"
+                            value="{{ $technology->id }}" id="tech-{{ $technology->id }}" name="tachnologies[]"
                             {{ in_array($technology->id, old('technologies', [])) ? 'checked' : '' }} />
                         <label class="form-check-label px-3" for="tech-{{ $technology->id }}"> {{ $technology->name }}
                         </label>
+                        @error('technologies')
+                            <div class="text-danger py-2">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="px-3">
                         |
