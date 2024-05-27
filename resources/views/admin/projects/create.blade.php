@@ -40,18 +40,18 @@
                 @foreach ($technologies as $technology)
                     <div class="form-check col-2">
                         <input class="form-check-input @error('technologies') is-invalid @enderror" type="checkbox"
-                            value="{{ $technology->id }}" id="tech-{{ $technology->id }}" name="tachnologies[]"
+                            value="{{ $technology->id }}" id="tech-{{ $technology->id }}" name="technologies[]"
                             {{ in_array($technology->id, old('technologies', [])) ? 'checked' : '' }} />
                         <label class="form-check-label px-3" for="tech-{{ $technology->id }}"> {{ $technology->name }}
                         </label>
-                        @error('technologies')
-                            <div class="text-danger py-2">{{ $message }}</div>
-                        @enderror
                     </div>
                     <div class="px-3">
                         |
                     </div>
                 @endforeach
+                @error('technologies')
+                    <div class="text-danger py-2">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="url1" class="form-label">GitHub link</label>

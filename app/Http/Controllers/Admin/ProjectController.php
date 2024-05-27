@@ -51,11 +51,12 @@ class ProjectController extends Controller
             $validatedRequest['img'] = $img_path; //save the path inside validated data
         }
         $project = Project::create($validatedRequest);
+        //dd($project);
         if($request->has('technologies'))
         {
             $project->technologies()->attach($validatedRequest['technologies']);
         }
-        dd($project);
+        //dd($project);
         //redirect
         return to_route('admin.projects.index')->with('status',"Add successfully project '$title' !");
     }
