@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\TypeController; //add \Admin to path
+use App\Http\Controllers\TechnologyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,8 @@ Route::middleware(['auth', 'verified'])
         Route::resource('projects', ProjectController::class)->parameters(['projects' => 'project:slug']); //ADD slugs instead of ID in URL with ->parameters(['names'=>'name:slug'])
 
         Route::resource('types', TypeController::class)->parameters(['types' => 'type:slug']);
+
+        Route::resource('technologies',TechnologyController::class)->parameters(['technologies'=> 'tech:slug']);
     });
 
 Route::middleware('auth')->group(function () {

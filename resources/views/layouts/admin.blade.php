@@ -57,6 +57,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin.types.index') }}">{{ __('Types') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('admin.technologies.index') }}">{{ __('Techs') }}</a>
+                        </li>
                     </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -101,4 +104,5 @@
         </main>
     </div>
 </body>
+
 </html>
