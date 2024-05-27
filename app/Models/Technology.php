@@ -11,12 +11,12 @@ class Technology extends Model
     use HasFactory;
 
     /**
-     * The roles that belong to the Technology
+     * The projects that belong to the Technology
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function roles(): BelongsToMany
+    public function projects(): BelongsToMany
     {
-        return $this->belongsToMany(Role::class, 'role_user_table', 'user_id', 'role_id');
+        return $this->belongsToMany(Project::class);
     }
 }
