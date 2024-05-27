@@ -23,7 +23,7 @@ class TechnologyController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.techs.create');
     }
 
     /**
@@ -31,7 +31,11 @@ class TechnologyController extends Controller
      */
     public function store(StoreTechnologyRequest $request)
     {
-        
+        $name = $request['name'];
+        $validatedRequest = $request->validated();
+        $validatedRequest['slug'] = Str::slug($request->name,'-');
+        Technology::create($validatedRequest);
+        return to_route('admin.technologies.index')->with('status', "Add successfully type -> '$name' !");
     }
 
     /**
@@ -72,6 +76,8 @@ class TechnologyController extends Controller
      */
     public function destroy(Technology $technology)
     {
-        //
+        $name = $technology['name'];
+        $technology->delete();
+        return to_route('admin.technologies.index')->with('status',"Deleted -> '$name' tech with success..");
     }
 }
