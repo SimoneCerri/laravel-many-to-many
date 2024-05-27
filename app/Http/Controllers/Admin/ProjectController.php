@@ -50,7 +50,12 @@ class ProjectController extends Controller
             $img_path = Storage::put('uploads',$validatedRequest['img']); //take the path
             $validatedRequest['img'] = $img_path; //save the path inside validated data
         }
-        Project::create($validatedRequest);
+        $project = Project::create($validatedRequest);
+        if($request->has('technologies'))
+        {
+            $project->technologies()->attach($validatedRequest['technologies']);
+        }
+        dd($project);
         //redirect
         return to_route('admin.projects.index')->with('status',"Add successfully project '$title' !");
     }
