@@ -2,7 +2,7 @@
 
 @section('content')
     <header>
-        <div class="container-fluid bg-dark py-3 text-danger">
+        <div class="container-fluid bg-dark py-3 text-danger shadow-lg">
             <div class="container d-flex align-items-center justify-content-between">
                 <h1>
                     <strong>

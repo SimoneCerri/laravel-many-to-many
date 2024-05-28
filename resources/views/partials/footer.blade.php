@@ -1,6 +1,6 @@
 <footer>
     <section class="bg-white border-top border-black">
-        <div class="container-fluid py-5">
+        <div class="container-fluid mt-5">
             <div class="row text-center">
                 <div class="col-4">
                     <hr>
@@ -29,11 +29,11 @@
                 </div>
             </div>
             <div class="row justify-content-center text-center mt-3">
-                <div class="col">
-                    <img src="" alt="">
+                <div class="col d-flex flex-column align-items-center gap-3">
                     <span>
                         Copyright &copy; 2024 Simone Cerri.
                     </span>
+                    <img width="150" src="{{ Vite::asset('resources/img/logosmall.jpg') }}">
                 </div>
             </div>
         </div>

@@ -20,8 +20,8 @@
 
 ### TO DO ###
 
-- Change logo in nav & footer []
-- Home page for guests with big logo + bio []
+- Change logo in nav & footer [X]
+- Home page for guests with big logo + bio [X]
 - Dashboard with graphic (?) []
 - Buttons for admin/home []
 - TO DO list in admin/home []
