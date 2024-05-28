@@ -103,7 +103,7 @@
                             </tr>
                         @empty
                             <tr class="">
-                                <td scope="row" colspan="6">No projects to show</td>
+                                <td scope="row" colspan="7">No projects to show</td>
                             </tr>
                         @endforelse
                     </tbody>

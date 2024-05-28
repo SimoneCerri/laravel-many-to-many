@@ -42,17 +42,17 @@
                                 <td scope="row">{{ $technology->name }}</td>
                                 <td scope="row">{{ $technology->slug }}</td>
                                 <td scope="row" class="text-center d-flex justify-content-evenly">
-                                    <div class="px-1">
+                                    <div class="">
                                         <a class="btn btn-dark" href="{{ route('admin.technologies.show', $technology) }}">
                                             <i class="fas fa-eye fa-sm fa-fw"></i>
                                         </a>
                                     </div>
-                                    <div class="px-1">
+                                    <div class="">
                                         <a class="btn btn-dark" href="{{ route('admin.technologies.edit', $technology) }}">
                                             <i class="fas fa-pencil fa-sm fa-fw"></i>
                                         </a>
                                     </div>
-                                    <div class="px-1">
+                                    <div class="">
                                         <!-- Button trigger modal -->
                                         <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                                             data-bs-target="#modalId-{{ $technology->id }}">
