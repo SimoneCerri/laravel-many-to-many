@@ -51,14 +51,19 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin.dashboard') }}">{{ __('Dashboard') }}</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.projects.index') }}">{{ __('Projects') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.types.index') }}">{{ __('Types') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.technologies.index') }}">{{ __('Techs') }}</a>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ __('Portfolio') }}
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item"
+                                    href="{{ route('admin.projects.index') }}">{{ __('Projects') }}</a>
+                                <a class="dropdown-item"
+                                    href="{{ route('admin.types.index') }}">{{ __('Types') }}</a>
+                                <a class="dropdown-item"
+                                    href="{{ route('admin.technologies.index') }}">{{ __('Techs') }}</a>
+                            </div>
                         </li>
                     </ul>
                     <!-- Right Side Of Navbar -->
