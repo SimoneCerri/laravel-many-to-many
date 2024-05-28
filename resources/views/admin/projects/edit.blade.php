@@ -29,7 +29,7 @@
                     <div class="form-check col-2">
                         <input class="form-check-input @error('technologies') is-invalid @enderror" type="checkbox"
                             value="{{ $technology->id }}" id="tech-{{ $technology->id }}" name="technologies[]"
-                            {{ in_array($technology->id, old('technologies', [])) ? 'checked' : '' }} />
+                            {{ $project->technologies->contains($technology) ? 'checked' : '' }} />
                         <label class="form-check-label px-3" for="tech-{{ $technology->id }}"> {{ $technology->name }}
                         </label>
                     </div>

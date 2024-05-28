@@ -96,6 +96,14 @@ class ProjectController extends Controller
             $img_path = Storage::put('uploads', $validatedRequest['img']); //take the path
             $validatedRequest['img'] = $img_path; //save the path inside validated data
         }
+        if($project->has('technologies'))
+        {
+            $project->technologies()->sync($validatedRequest['technologies']);
+        }
+        else
+        {
+            $project->technologies()->sync([]);
+        }
         $project->update($validatedRequest);
         $title = $project['title'];
         return to_route('admin.projects.index')->with('status',"Project '$title' updated with success !");
