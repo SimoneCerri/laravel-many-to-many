@@ -73,6 +73,32 @@
 
 
 /* #region Main */
+.pagination>li>a {
+    background-color: #333;
+    color: white;
+}
+
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover {
+    color: red;
+    background-color: #333;
+    border: solid 1px red !important;
+}
+
+.pagination>.active>span {
+    color: #333 !important;
+    background-color: red !important;
+    border: solid 1px red !important;
+}
+
+.pagination>.active>span:hover {
+    background-color: #333 !important;
+    border: solid 1px red !important;
+    color: red !important;
+}
+
 
 /* #endregion Main */
 

@@ -18,7 +18,7 @@
 
 - Aggiungere le operazioni CRUD per il model Technology, in modo da gestire le tecnologie utilizzate nei progetti direttamente dal pannello di amministrazione. [X]
 
-### TO DO ###
+# TO DO #
 
 - Change logo in nav & footer [X]
 - Home page for guests with big logo + bio [X]
