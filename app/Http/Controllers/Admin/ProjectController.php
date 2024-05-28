@@ -58,7 +58,7 @@ class ProjectController extends Controller
         }
         //dd($project);
         //redirect
-        return to_route('admin.projects.index')->with('status',"Add successfully project '$title' !");
+        return to_route('admin.projects.show',compact('project'))->with('status',"Add successfully project '$title' !");
     }
 
     /**
@@ -75,7 +75,8 @@ class ProjectController extends Controller
     public function edit(Project $project)
     {
         $types = Type::all();
-        return view('admin.projects.edit',compact('project','types'));
+        $technologies = Technology::all();
+        return view('admin.projects.edit',compact('project','types','technologies'));
     }
 
     /**

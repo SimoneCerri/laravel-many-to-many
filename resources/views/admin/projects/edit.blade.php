@@ -24,6 +24,23 @@
                     <div class="text-danger py-2">{{ $message }}</div>
                 @enderror
             </div>
+            <div class="d-flex flex-wrap mb-3">
+                @foreach ($technologies as $technology)
+                    <div class="form-check col-2">
+                        <input class="form-check-input @error('technologies') is-invalid @enderror" type="checkbox"
+                            value="{{ $technology->id }}" id="tech-{{ $technology->id }}" name="technologies[]"
+                            {{ in_array($technology->id, old('technologies', [])) ? 'checked' : '' }} />
+                        <label class="form-check-label px-3" for="tech-{{ $technology->id }}"> {{ $technology->name }}
+                        </label>
+                    </div>
+                    <div class="px-3">
+                        |
+                    </div>
+                @endforeach
+                @error('technologies')
+                    <div class="text-danger py-2">{{ $message }}</div>
+                @enderror
+            </div>
             <div class="mb-3">
                 <label for="url1" class="form-label fw-bold">GitHub link</label>
                 <input type="text" class="form-control @error('url1') is-invalid @enderror" name="url1" id="url1"
@@ -69,7 +86,9 @@
                 <select class="form-select" name="type_id" id="type_id">
                     <option selected disabled>Select one</option>
                     @foreach ($types as $type)
-                        <option value="{{$type->id}}" {{$type->id == old('type_id',$project->type_id) ? 'selected' : '' }} >{{$type->name}}</option>
+                        <option value="{{ $type->id }}"
+                            {{ $type->id == old('type_id', $project->type_id) ? 'selected' : '' }}>{{ $type->name }}
+                        </option>
                     @endforeach
                 </select>
             </div>

@@ -12,10 +12,11 @@
             </div>
         </div>
     </header>
-    @dd($project)
+    {{-- @dd($project) --}}
     <section class="py-5">
         <div class="container py-5">
-            <div class="row">
+            @include('partials.session-message')
+            <div class="row py-3">
                 <div class="col-2"><span class="fw-bold">Project ID:</span></div>
                 <div class="col-3"><span class="fw-bold">Image:</span></div>
                 <div class="col-4"><span class="fw-bold">GitHub:</span></div>
@@ -55,7 +56,11 @@
             <div class="row text-center py-3">
                 <div class="col-12">
                     <span class="fw-bold">Techs:</span> <br>
-                    <span scope="col-12">{{ $project->technologies ? $project->technologies : 'Not selected' }}</span>
+                    @forelse ($project->technologies as $technology)
+                        <span class="badge bg-dark" scope="col-12">{{ $technology->name }}</span>
+                    @empty
+                        <span scope="col-12">No techs selected</span>
+                    @endforelse
                 </div>
             </div>
             <div class="row text-center py-3">
