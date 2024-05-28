@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <header class="py-3 bg-dark text-danger shadow-lg">
+    <header class="py-3 bg-dark text-danger shadow">
         <div class="container">
             <h1>
                 <strong>

@@ -23,7 +23,7 @@
 - Change logo in nav & footer [X]
 - Home page for guests with big logo + bio [X]
 - Dashboard with graphic (?) []
-- Buttons for admin/home []
+- Buttons for admin/home [X]
 - TO DO list in admin/home []
 - Create pages + href in footer for:
     - Legal []
@@ -31,4 +31,4 @@
     - Security []
     - Website Accessability []
     - Manage Cookies []
-- Add href for socials []
+- Add href for socials [X]

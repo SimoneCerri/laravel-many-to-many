@@ -8,17 +8,19 @@
                 <div class="col-4">
                     <ul class="list-unstyled d-flex justify-content-evenly">
                         <li>
-                            <a href="">
+                            <a href="https://www.facebook.com/SimoCerri" target="_blank" rel="noopener noreferrer">
                                 <i class="fa-brands fa-xl fa-fw fa-square-facebook" style="color: #000000;"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="https://www.linkedin.com/in/simone-cerri-5b6146b2/" target="_blank"
+                                rel="noopener noreferrer">
                                 <i class="fa-brands fa-xl fa-fw fa-linkedin" style="color: #000000;"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="https://www.instagram.com/simonestocazzocerri/" target="_blank"
+                                rel="noopener noreferrer">
                                 <i class="fa-brands fa-xl fa-fw fa-square-instagram" style="color: #000000;"></i>
                             </a>
                         </li>
