@@ -26,7 +26,7 @@
                 List of types:
             </h4>
             <div class="table-responsive rounded-top-3">
-                <table class="table table-secondary align-middle">
+                <table class="table table-secondary align-middle text-center">
                     <thead class="table-dark">
                         <tr>
                             <th class="text-danger" scope="col">ID</th>
